@@ -117,6 +117,7 @@ async fn run_subcommand(flags: Arc<Flags>) -> Result<i32, AnyError> {
       if bench_flags.watch.is_some() {
         tools::bench::run_benchmarks_with_watch(flags, bench_flags).await
       } else {
+        dbg!("hi");
         tools::bench::run_benchmarks(flags, bench_flags).await
       }
     }),
